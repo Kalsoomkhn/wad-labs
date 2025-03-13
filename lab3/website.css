@@ -59,6 +59,7 @@ p {
     margin-right: 40px;
     font-size: 1rem;
     letter-spacing:0cap;
+    text-align: justify;
 }
 
 #Intro p .first-letter {
@@ -66,7 +67,13 @@ p {
     text-transform: uppercase; 
     font-weight:200;
   }
-  
+
+.postDate{
+    text-align: center;
+}
+#paragraphIndent{
+    text-indent: 3.5rem;
+}
 .Navigation {
     background-color: var(--bgBlue); 
     padding: 14px 0;
@@ -92,6 +99,11 @@ p {
     border-radius: 5px;
 }
 
+.caption {
+    font-size: 0.9rem; 
+    color: #555; 
+    margin-top: 8px; 
+}
 #logoPic {
     width: 80px;
     height: 80px;
@@ -143,7 +155,7 @@ background:#eede52;
 .italyPic{
     border-radius: 5%;
     background-origin: padding-box;
-    
+    margin: 1.2rem;
     border-width: 1px;
     box-shadow: 2px 2px 4px 4px rgb(243, 235, 235);
 }
