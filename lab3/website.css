@@ -17,6 +17,13 @@ html{
     --txtTransform: uppercase;
 
 }
+body {
+    background-image: url('bg2.jpg'); 
+    background-size: cover; 
+    background-attachment:fixed;
+    background-position: center;
+}
+
 h1 {
     color: var(--bgBlack);
     margin-top: 0px;
@@ -144,6 +151,7 @@ background:#eede52;
 .ProfileCard h2{
     color: var(--bgNavy);
     font-size: 1.5rem; 
+    
 }
 .ProfilePic {
     width: 140px;
@@ -178,9 +186,14 @@ a:hover{
 #bio {
     font-size: 14px;
     color: #555;
+    text-align: center;
 }
 #followers {
     font-size: 16px;
     font-weight: bold;
     color: var(--bgSkyBlue);
+    text-align: center;
+}
+#footer{
+    text-align: center;
 }
