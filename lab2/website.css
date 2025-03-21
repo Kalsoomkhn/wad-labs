@@ -1,0 +1,56 @@
+body {
+    font-family: sans-serif;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+h3 {
+    color: #333;
+    font-size: 22px;
+}
+
+h2 {
+    color: #008080;
+    font-size: 28px;
+}
+
+li {
+    margin: 8px 0;
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+}
+
+.Navigation {
+    background-color: #008080; 
+    padding: 14px 0;
+    text-align: center;
+}
+
+.Navigation nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.Navigation nav a:hover {
+    background-color: #006666; 
+    border-radius: 5px;
+}
+
+img {
+    width: 155px;
+    height: 155px;
+    margin: 10px;
+}

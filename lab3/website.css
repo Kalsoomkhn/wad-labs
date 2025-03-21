@@ -1,0 +1,166 @@
+body {
+    font-family: sans-serif;
+    background-color: #f9f9f9;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    text-align: center;
+}
+html {
+    font-size: 16px;
+}
+:root {
+    --bgBlack: #333;
+    --bgWhite: white;
+    --txtTransform: uppercase;
+}
+body {
+    background-image: url('bg2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+h1 {
+    color: var(--bgBlack);
+    margin-top: 0rem;
+    font-size: 2rem;
+    text-shadow: 0.125rem 0.125rem 0.25rem white;
+}
+h2 {
+    font-weight: bold;
+    letter-spacing: 0.03125rem;
+    text-transform: var(--txtTransform);
+    color: var(--bgNavy);
+    font-size: 2.5rem;
+    text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
+}
+h3 {
+    color: var(--bgBlack);
+    font-size: 2rem;
+    text-transform: var(--txtTransform);
+}
+h4 {
+    color: var(--bgBlack);
+    font-size: 0.9rem;
+    text-transform: var(--txtTransform);
+    font-weight: 300;
+}
+li {
+    margin: 0.5rem 0;
+    margin-left: 13.75rem;
+    margin-right: 13.75rem;
+    color: var(--bgBlack);
+    line-height: 1.5;
+}
+p {
+    color: var(--bgBlack);
+    line-height: 1.5;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    font-size: 1rem;
+    letter-spacing: 0cap;
+    text-align: justify;
+}
+#Intro p .first-letter {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 200;
+}
+.postDate {
+    text-align: center;
+}
+#paragraphIndent {
+    text-indent: 3.5rem;
+}
+.Navigation {
+    background-color: var(--bgBlue);
+    padding: 0.875rem 0;
+    text-align: center;
+    border-style: solid;
+    border-width: 0.0625rem;
+    margin-left: 13.75rem;
+    margin-right: 13.75rem;
+    border-radius: 0.625rem;
+}
+.Navigation nav a {
+    color: var(--bgWhite);
+    text-decoration: none;
+    padding: 0.875rem 1.25rem;
+    display: inline-block;
+    font-size: 1.125rem;
+    transition: 0.3s;
+}
+.Navigation nav a:hover {
+    background-color: #006666;
+    border-radius: 0.3125rem;
+}
+.caption {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0.5rem;
+}
+#logoPic {
+    width: 5rem;
+    height: 5rem;
+    margin: 0.625rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 0.125rem solid var(--bgSkyblue);
+}
+.Article {
+    border-style: solid;
+    border-width: 0.0625rem;
+    border-radius: 0.625rem;
+    margin-left: 13.75rem;
+    margin-right: 13.75rem;
+    background: #eede52;
+}
+.ProfileCard {
+    background-color: var(--bgWhite);
+    width: 18.75rem;
+    margin: 3.125rem auto;
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    box-shadow: 0px 0px 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+.ProfileCard h2 {
+    color: var(--bgNavy);
+    font-size: 1.5rem;
+}
+.ProfilePic {
+    width: 8.75rem;
+    height: 8.75rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 0.1875rem solid var(--bgSkyblue);
+}
+.italyPic {
+    border-radius: 5%;
+    background-origin: padding-box;
+    margin: 1.2rem;
+    border-width: 0.0625rem;
+    box-shadow: 0.125rem 0.125rem 0.25rem 0.25rem rgb(243, 235, 235);
+}
+a[href^="https"] {
+    color: #f73a3a;
+    font-weight: light;
+    font-family: 'Arial', Times, serif;
+}
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+#bio {
+    font-size: 0.875rem;
+    color: #555;
+    text-align: center;
+}
+#followers {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--bgSkyblue);
+    text-align: center;
+}
+#footer {
+    text-align: center;
+}

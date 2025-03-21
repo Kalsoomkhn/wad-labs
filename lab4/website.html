@@ -1,0 +1,199 @@
+<!Doctype html>
+<html lang = en>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Intro Website</title>
+    <link rel="stylesheet" href="website.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="logo.jpg" alt="Here is the logo." id="logoPic"/> 
+    </header>
+    <h1>StudentPortal</h1>
+    <h4>All Info Across Years</h4>
+
+    <div class="Navigation">
+        <nav>
+            <a href="#Table">View Records</a>
+            <a href="#Form">Data Form</a>
+        </nav>
+        </div>
+<br>
+<br>
+
+<div id="Table">
+<h2>Detailed Gradesheet</h2>
+<table>
+    <caption>Student Information 2025</caption>
+    <thead>
+    <tr>
+        <th>Sr. no</th>
+        <th>Name</th>
+        <th>Regs No</th>
+        <th>Email</th>
+        <th>DOB</th>
+        <th>Contact</th>
+        <th>Password</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>Laiba</td>
+        <td>1234</td>
+        <td>laiba@gmail.com</td>
+        <td>18-04-2006</td>
+        <td>+9234567821</td>
+        <td>8d87</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Rania</td>
+        <td>1234</td>
+        <td>laiba@gmail.com</td>
+        <td>18-04-2006</td>
+        <td>+9234567821</td>
+        <td>8d87</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Amsha</td>
+        <td>1234</td>
+        <td>laiba@gmail.com</td>
+        <td>18-04-2006</td>
+        <td>+9234567821</td>
+        <td>8d87</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Hania</td>
+        <td>1234</td>
+        <td>laiba@gmail.com</td>
+        <td>18-04-2006</td>
+        <td>+9234567821</td>
+        <td>8d87</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Kiran</td>
+        <td>1234</td>
+        <td>laiba@gmail.com</td>
+        <td>18-04-2006</td>
+        <td>+9234567821</td>
+        <td>8d87</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>Ali</td>
+        <td>1234</td>
+        <td>laiba@gmail.com</td>
+        <td>18-04-2006</td>
+        <td>+9234567821</td>
+        <td>8d87</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>Nimra</td>
+        <td>1234</td>
+        <td>laiba@gmail.com</td>
+        <td>18-04-2006</td>
+        <td>+9234567821</td>
+        <td>8d87</td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>Narmeen</td>
+        <td>1234</td>
+        <td>laiba@gmail.com</td>
+        <td>18-04-2006</td>
+        <td>+9234567821</td>
+        <td>8d87</td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>Zahra</td>
+        <td>1234</td>
+        <td>laiba@gmail.com</td>
+        <td>18-04-2006</td>
+        <td>+9234567821</td>
+        <td>8d87</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>Hamza</td>
+        <td>1234</td>
+        <td>laiba@gmail.com</td>
+        <td>18-04-2006</td>
+        <td>+9234567821</td>
+        <td>8d87</td>
+    </tr>
+</tbody>
+<tfoot>
+    <tr>
+      <td colspan="7">Total Students: 10</td>
+    </tr>
+  </tfoot>
+</table>
+</div>
+
+<h2>Student Data Form</h2>
+<form id="Form" method="post" action="process.php" enctype="multipart/form-data">
+    <fieldset>
+        <legend>Add Student Record</legend><br>
+        <label for="name">Name <span class="compulsory">*</span></label>
+        <input type="text" id="name" name="std-name" required><br><br>
+        <label for="regs">Regs No</label>
+        <input type="text" id="regs" name="regs-no"><br><br>
+        <label for=""age>Age</label>
+        <input type="number" id="age" name="age"><br><br>
+        <label for="mail">Email <span class="compulsory">*</span></label>
+        <input type="email" id="mail" name="e-mail" required><br><br>
+        <label for="dob">Date of Birth <span class="compulsory">*</span></label>
+        <input type="date" id="dob" name="dob" required><br><br>
+        <label for="contact">Contact <span class="compulsory">*</span></label>
+        <input type="tel" id="contact" name="contact" required><br><br>
+
+        <label>Gender</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br><br>
+
+        <label for="pswrd">Password <span class="compulsory">*</span></label>
+        <input type="password" id="pswrd" name="paswrd" required><br><br>
+
+        <label for="country">Country</label>
+        <select id="country" aria-placeholder="Select Country">
+            <option value="" disabled selected>Select Country</option>
+            <option>pakistan</option>
+            <option>Canada</option>
+            <option>Finland</option>
+            <option>Australia</option>
+        </select><br><br>
+
+        <label for="cnic">Upload CNIC</label><input type="file" id="cnic" name="filee"><br><br>
+
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+    </fieldset>
+</form>
+<div class="report">
+<h2>Report</h2>
+<p>In this lab task, i have designed html table and a form and have designed it through css.
+ First of all I started with a footer for the web page, for that i added a logo and a website name.
+ After tat i have added a navigation bar and have used pseudo elements and pseudo classes their. have successfully applied a different color to the options for more readability. 
+ For designing my html table, I used different symentic elements of a table. For styling purpose i have used pseudo class like the nth-child for colouring the ven number of rows.
+</p>
+ <p id="paraIndent">To create a form, I used the basic html table structure and styled it using attribute selectors, i have also implemented a different theme and styling for the label, input and legend feilds. For the button, i have used the hover effect to make it more interactive. 
+ overall I have focused on maintaining a theme consitency within my website. At the end of the web page, a footer has been added as well.
+</p>
+</div>
+<footer>
+    <p id="footer"><span>© 2025 Kalsoom Khan. All Rights Secured.</span></p>
+</footer>
+
+</body>
+</html>
