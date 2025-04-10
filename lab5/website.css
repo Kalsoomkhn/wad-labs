@@ -1,190 +1,277 @@
-body {
-    font-family: sans-serif;
-    background-color: #f9f9f9;
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
-    text-align: center;
-}
-html {
-    font-size: 16px;
-}
 :root {
     --bgBlack: #333;
     --bgWhite: white;
     --txtTransform: uppercase;
+    --primaryColor: #188888;
+    --secondaryColor: #eede52;
+    --textColor: #333;
+    --shadowColor: rgba(0, 0, 0, 0.1);
+    --linkColor: #f73a3a;
+    --linkHover: #2980b9;
 }
-  
+
+html {
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
 
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--textColor);
+    margin: 0;
+    padding: 0;
     background-image: url('bg2.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+    min-height: 100vh;
 }
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr minmax(300px, 1200px) 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        ". main pc "
+        "footer footer footer";
+    gap: 2rem;
+    min-height: 100vh;
+    background-color: rgba(249, 249, 249, 0.85);
+    backdrop-filter: blur(5px);
+}
+
+header {
+    grid-area: header;
+    text-align: center;
+    padding: 1.5rem 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 5px var(--shadowColor);
+}
+
 h1 {
     color: var(--bgBlack);
-    margin-top: 0rem;
-    font-size: 2rem;
+    margin: 0.5rem 0 0;
+    font-size: 2.5rem;
     text-shadow: 0.125rem 0.125rem 0.25rem white;
 }
+
 h2 {
     font-weight: bold;
     letter-spacing: 0.03125rem;
     text-transform: var(--txtTransform);
-    color: var(--bgNavy);
-    font-size: 2.5rem;
-    text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
-}
-h3 {
-    color: var(--bgBlack);
+    color: var(--primaryColor);
     font-size: 2rem;
-    text-transform: var(--txtTransform);
-}
-h4 {
-    color: var(--bgBlack);
-    font-size: 0.9rem;
-    text-transform: var(--txtTransform);
-    font-weight: 300;
-}
-li {
-    margin: 0.5rem 0;
-    margin-left: 13.75rem;
-    margin-right: 13.75rem;
-    color: var(--bgBlack);
-    line-height: 1.5;
-}
-p {
-    color: var(--bgBlack);
-    line-height: 1.5;
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
-    font-size: 1rem;
-    letter-spacing: 0cap;
-    text-align: justify;
-}
-#Intro p .first-letter {
-    font-size: 2rem;
-    text-transform: uppercase;
-    font-weight: 200;
-}
-.postDate {
-    text-align: center;
-}
-#paragraphIndent {
-    text-indent: 3.5rem;
+    margin-top: 2rem;
 }
 
-.container{
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas:
-    "H H"
-    "N N"
-    "A P"
-    "F F";
-    gap: 1rem;
-    padding: 2rem;
-    background-image: url('bg2.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+h3 {
+    color: var(--bgBlack);
+    font-size: 1.75rem;
+    text-transform: var(--txtTransform);
+    margin-top: 1.5rem;
 }
+
+h4 {
+    color: var(--bgBlack);
+    font-size: 1.1rem;
+    text-transform: var(--txtTransform);
+    font-weight: 300;
+    margin: 0.5rem 0 1.5rem;
+}
+
 .Navigation {
-    grid-area: N;
-    background-color: #188888;
-    padding: 0.875rem 0;
+    grid-area: nav;
+    background-color: var(--primaryColor);
+    padding: 1rem 0;
     text-align: center;
-    border-style: solid;
-    border-width: 0.0625rem;
-    margin-left: 13.75rem;
-    margin-right: 13.75rem;
-    border-radius: 0.625rem;
+    box-shadow: 0 2px 5px var(--shadowColor);
 }
+
+.Navigation nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
 .Navigation nav a {
     color: var(--bgWhite);
     text-decoration: none;
-    padding: 0.875rem 1.25rem;
-    display: inline-block;
-    font-size: 1.125rem;
-    transition: 0.3s;
-}
-.Navigation nav a:hover {
-    background-color: #006666;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
     border-radius: 0.3125rem;
 }
-.caption {
-    font-size: 0.9rem;
-    color: #555;
-    margin-top: 0.5rem;
-}
-#logoPic {
-    width: 5rem;
-    height: 5rem;
-    margin: 0.625rem;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 0.125rem solid var(--bgSkyblue);
-}
-.Article {
-    grid-area: A;
-    border-style: solid;
-    border-width: 0.0625rem;
-    border-radius: 0.625rem;
-    margin-left: 13.75rem;
-    margin-right: 13.75rem;
-    background: #eede52;
-}
-.ProfileCard {
-    grid-area: P;
-    background-color: var(--bgWhite);
-    width: 18.75rem;
-    margin: 3.125rem auto;
-    padding: 1.25rem;
-    border-radius: 0.625rem;
-    box-shadow: 0px 0px 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
-    text-align: center;
 
+.Navigation nav a:hover {
+    background-color: #006666;
+    transform: translateY(-2px);
 }
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 2rem;
+    align-items: start;
+}
+
+.Article {
+    background: var(--secondaryColor);
+    border-radius: 0.625rem;
+    padding: 2rem;
+    box-shadow: 0 2px 10px var(--shadowColor);
+}
+
+.ProfileCard {
+    background-color: var(--bgWhite);
+    border-radius: 0.625rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px var(--shadowColor);
+    position: sticky;
+    top: 2rem;
+    text-align: center;
+}
+
 .ProfileCard h2 {
-    color: var(--bgNavy);
+    grid-area: pc;
     font-size: 1.5rem;
+    margin: 1rem 0 0.5rem;
 }
+
 .ProfilePic {
     width: 8.75rem;
     height: 8.75rem;
     border-radius: 50%;
     object-fit: cover;
-    border: 0.1875rem solid var(--bgSkyblue);
+    border: 0.1875rem solid var(--primaryColor);
+    margin: 0 auto;
 }
+
+#logoPic {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 0.125rem solid var(--primaryColor);
+}
+
 .italyPic {
-    border-radius: 5%;
-    background-origin: padding-box;
-    margin: 1.2rem;
-    border-width: 0.0625rem;
-    box-shadow: 0.125rem 0.125rem 0.25rem 0.25rem rgb(243, 235, 235);
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin: 1.5rem auto;
+    display: block;
+    box-shadow: 0.125rem 0.125rem 0.5rem var(--shadowColor);
 }
-a[href^="https"] {
-    color: #f73a3a;
-    font-weight: light;
-    font-family: 'Arial', Times, serif;
-}
-a:hover {
-    color: #2980b9;
-    text-decoration: underline;
-}
-#bio {
-    font-size: 0.875rem;
+
+.caption {
+    font-size: 0.9rem;
     color: #555;
     text-align: center;
+    margin-top: -1rem;
+    margin-bottom: 1.5rem;
 }
+
+.postDate {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+p {
+    margin: 1rem 0;
+    text-align: justify;
+}
+
+#Intro p .first-letter {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1;
+}
+
+#paragraphIndent {
+    text-indent: 3.5rem;
+}
+
+ol, dl {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+}
+
+li {
+    margin: 0.75rem 0;
+}
+
+dt {
+    margin-top: 2rem;
+}
+
+a[href^="https"] {
+    color: var(--linkColor);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--linkHover);
+    text-decoration: underline;
+}
+
+#bio {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0.5rem 0;
+}
+
 #followers {
     font-size: 1rem;
     font-weight: bold;
-    color: var(--bgSkyblue);
-    text-align: center;
+    color: var(--primaryColor);
+    margin: 1rem 0 0;
 }
-.footer {
-    grid-area:F;
+
+footer {
+    grid-area: footer;
     text-align: center;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 -2px 5px var(--shadowColor);
+}
+
+@media (max-width: 900px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    
+    .ProfileCard {
+        position: static;
+        margin-top: 2rem;
+    }
+    
+    .container {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+    
+    .Navigation nav {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0 1rem;
+    }
+    
+    .Navigation nav a {
+        display: block;
+        width: 100%;
+    }
 }
