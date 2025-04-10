@@ -1,3 +1,8 @@
+html {
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
 :root {
     --bgBlack: #333;
     --bgWhite: white;
@@ -8,15 +13,6 @@
     --shadowColor: rgba(0, 0, 0, 0.1);
     --linkColor: #f73a3a;
     --linkHover: #2980b9;
-}
-
-html {
-    font-size: 16px;
-    box-sizing: border-box;
-}
-
-*, *::before, *::after {
-    box-sizing: inherit;
 }
 
 body {
@@ -34,17 +30,18 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr minmax(300px, 1200px) 1fr;
-    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: 1fr minmax(300px, 1fr) 1fr;
+    grid-template-rows: auto auto auto auto auto;
     grid-template-areas:
         "header header header"
         "nav nav nav"
-        ". main pc "
+        ". article profile"
+        ". article profile"
         "footer footer footer";
     gap: 2rem;
-    min-height: 100vh;
     background-color: rgba(249, 249, 249, 0.85);
     backdrop-filter: blur(5px);
+    padding: 2rem;
 }
 
 header {
@@ -53,37 +50,6 @@ header {
     padding: 1.5rem 0;
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 2px 5px var(--shadowColor);
-}
-
-h1 {
-    color: var(--bgBlack);
-    margin: 0.5rem 0 0;
-    font-size: 2.5rem;
-    text-shadow: 0.125rem 0.125rem 0.25rem white;
-}
-
-h2 {
-    font-weight: bold;
-    letter-spacing: 0.03125rem;
-    text-transform: var(--txtTransform);
-    color: var(--primaryColor);
-    font-size: 2rem;
-    margin-top: 2rem;
-}
-
-h3 {
-    color: var(--bgBlack);
-    font-size: 1.75rem;
-    text-transform: var(--txtTransform);
-    margin-top: 1.5rem;
-}
-
-h4 {
-    color: var(--bgBlack);
-    font-size: 1.1rem;
-    text-transform: var(--txtTransform);
-    font-weight: 300;
-    margin: 0.5rem 0 1.5rem;
 }
 
 .Navigation {
@@ -115,15 +81,8 @@ h4 {
     transform: translateY(-2px);
 }
 
-main {
-    grid-area: main;
-    display: grid;
-    grid-template-columns: 1fr 300px;
-    gap: 2rem;
-    align-items: start;
-}
-
 .Article {
+    grid-area: article;
     background: var(--secondaryColor);
     border-radius: 0.625rem;
     padding: 2rem;
@@ -131,17 +90,58 @@ main {
 }
 
 .ProfileCard {
+    grid-area: profile;
     background-color: var(--bgWhite);
     border-radius: 0.625rem;
     padding: 1.5rem;
     box-shadow: 0 2px 10px var(--shadowColor);
-    position: sticky;
-    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 -2px 5px var(--shadowColor);
+}
+
+h1 {
+    color: var(--bgBlack);
+    margin: 0.5rem 0 0;
+    font-size: 2.5rem;
+    text-shadow: 0.125rem 0.125rem 0.25rem white;
+}
+
+h2 {
+    font-weight: bold;
+    letter-spacing: 0.03125rem;
+    text-transform: var(--txtTransform);
+    color: var(--primaryColor);
+    font-size: 2rem;
+    margin-top: 2rem;
     text-align: center;
 }
 
+h3 {
+    color: var(--bgBlack);
+    font-size: 1.75rem;
+    text-transform: var(--txtTransform);
+    margin-top: 1.5rem;
+}
+
+h4 {
+    color: var(--bgBlack);
+    font-size: 1.1rem;
+    text-transform: var(--txtTransform);
+    font-weight: 300;
+    margin: 0.5rem 0 1.5rem;
+}
+
 .ProfileCard h2 {
-    grid-area: pc;
     font-size: 1.5rem;
     margin: 1rem 0 0.5rem;
 }
@@ -212,7 +212,7 @@ li {
     margin: 0.75rem 0;
 }
 
-dt {
+dl > dt {
     margin-top: 2rem;
 }
 
@@ -239,39 +239,4 @@ a:hover {
     font-weight: bold;
     color: var(--primaryColor);
     margin: 1rem 0 0;
-}
-
-footer {
-    grid-area: footer;
-    text-align: center;
-    padding: 1.5rem;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 -2px 5px var(--shadowColor);
-}
-
-@media (max-width: 900px) {
-    main {
-        grid-template-columns: 1fr;
-    }
-    
-    .ProfileCard {
-        position: static;
-        margin-top: 2rem;
-    }
-    
-    .container {
-        grid-template-columns: 1fr;
-        padding: 0 1rem;
-    }
-    
-    .Navigation nav {
-        flex-direction: column;
-        gap: 0.5rem;
-        padding: 0 1rem;
-    }
-    
-    .Navigation nav a {
-        display: block;
-        width: 100%;
-    }
 }
