@@ -1,169 +1,93 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
 
-  <body class="mt-15 bg-yellow-100">
+<body class="bg-cover bg-center bg-fixed" style="background-image: url('bg2.jpg'); margin-left: 2.5rem; margin-right: 2.5rem;">
 
-    <nav class="flex items-center shadow-lg gap-9 justify-center bg-purple-400  border-gray-400 border-2 border-solid p-4 rounded-xl">
-        <a href="https://kalsoomkhn.github.io/wad-labs/lab6/explore.html" class="text-black text-lg px-5 py-3 bg-[#d1abe2] font-semibold rounded-xl hover:bg-yellow-200 hover:text-black">
-          Part 1
-        </a>
-        <a href="https://kalsoomkhn.github.io/wad-labs/lab6/design.html" class="text-black text-lg px-5 py-3 bg-[#d1abe2] font-semibold rounded-xl hover:bg-yellow-200 hover:text-black">
-          Part 2
-        </a>
-        <a href="lab6/index.html" class="text-black text-lg px-5 py-3 bg-[#d1abe2] font-semibold rounded-xl hover:bg-yellow-200 hover:text-black">
-          Part 3
-        </a>
-      </nav>
-      
-
-    <h1 class="text-2xl font-extrabold tracking-wide uppercase text-center m-10">lab task 06: part 01</h1>
+  <div class="container mx-auto p-5">
     
-    <div class="container mx-auto p-10 bg-yellow-200"> <!-- max-auto will center the container-->
-      <div class="flex font-serif gap-8 justify-self-center h-screen items-center justify-center">
-
-        <div class="flex-1 bg-red-200 box-border  w-45 h-25 p-4 border-2 border-yellow-500 rounded-xl text-justify">
-          <h1 class="uppercase font-extrabold">flexbox 1</h1>
-          <p>Lorem ipsum dolor sit amet consectetur </p>
+    <header class="text-center mb-4">
+      <div class="flex justify-center items-center gap-4">
+        <img src="logo.jpg" alt="TourRadar logo" id="logoPic" class="w-20 h-20 rounded-full border-2 border-sky-400">
+        <div>
+          <h1 class="text-black text-2xl text-shadow-md">TourRadar</h1>
+          <h4 class="text-black text-xl">Your Travel Partner</h4>
         </div>
-        <div class="flex-1 bg-green-200 box-border w-45 h-25 p-4 border-2 border-yellow-500 rounded-xl text-justify">
-          <h1 class="uppercase font-extrabold">flexbox 2</h1>
-          <p>Lorem ipsum dolor sit amet consectetur </p>
-        </div>
-        <div class="flex-1 bg-indigo-200 box-border w-45 h-25 p-4 border-2 border-yellow-500 rounded-xl text-justify">
-          <h1 class="uppercase font-extrabold">flexbox 3</h1>
-          <p>Lorem ipsum dolor sit amet consectetur </p>
-        </div>
-
       </div>
+    </header>
+ 
+    <nav class="bg-teal-700 py-3 text-white text-center flex justify-center gap-8 rounded-lg border border-gray-300 mb-6">
+      <a href="index.html" class="text-white text-lg p-3 rounded-md bg-teal-600 hover:bg-yellow-100 hover:text-black transition duration-300">Part 3</a>
+      <a href="explor.html" class="text-white text-lg p-3 rounded-md bg-teal-600 hover:bg-yellow-100 hover:text-black transition duration-300">Part 1</a>
+      <a href="design.html" class="text-white text-lg p-3 rounded-md bg-teal-600 hover:bg-yellow-100 hover:text-black transition duration-300">Part 2</a>
+    </nav>
+ 
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
+ 
+      <section class="p-5 border border-gray-300 rounded-lg bg-yellow-100 shadow-lg sticky top-8 flex flex-col items-center gap-4 col-span-1">
+        <h2 class="text-teal-700 font-bold text-2xl text-shadow-md">Profile Card</h2>
+        <img src="ProfilePic.jpeg" alt="Profile picture of Kalsoom Khan" class="w-32 h-32 rounded-full border-2 border-yellow-400 object-cover">
+        <h2 class="text-teal-700 font-bold text-2xl text-shadow-md">Kalsoom Khan</h2>
+        <p id="bio" class="text-gray-500 text-center text-sm">Student at QAU | Web Developer | Interested to explore the world</p>
+        <p id="followers" class="text-center font-bold text-blue-500">Followers: <strong>10.2K</strong></p>
+      </section>
+ 
+      <article class="border border-gray-300 rounded-lg bg-yellow-100 p-5 col-span-2">
+        <h2 class="text-teal-700 font-bold text-2xl text-shadow-md">Top 3 Places in Italy</h2>
+        <p class="text-center text-gray-600"><em>Posted on: </em><span><em>March 13, 2025</em></span></p>
+        <div id="Intro">
+          <p><span class="first-letter text-2xl uppercase font-light">P</span>lanning for a trip to Italy? This article has got you all covered. With all these heavenly beautiful places and breathtaking views, Italy is the most visited tourist destination...</p>
+          <img src="italy.jpg" alt="Scenic view from a window in Italy" class="w-full rounded-md shadow-lg my-4">
+          <div class="caption italic text-center"><em>A beautiful scenic view from a window in Italy.</em></div>
+          <p>Lorem ipsum dolor sit amet...</p>
+          <ol class="list-decimal ml-10">
+            <li>Milan</li>
+            <li>Venice</li>
+            <li>Rome</li>
+          </ol>
 
-    </div>
-
-    <div class="container mt-10 mx-auto pt-10 px-10 pb-10 bg-lime-200"> <!-- max-auto will center the container-->
-      <div class="grid grid-cols-3 grid-flow-row gap-8 justify-self-center">
-
-        <div class="flex-1 bg-red-200 box-border p-3 border-2 border-gray-100 rounded-xl text-justify">
-          <h1 class="uppercase">this is box 1</h1>
-        </div>
-        <div class="flex-1 bg-green-200 box-border p-3 border-2 border-gray-100 rounded-xl text-justify">
-          <h1 class="uppercase">this is box 2</h1>
-        </div>
-        <div class="flex-1 bg-indigo-200 box-border p-3 border-2 border-gray-100 rounded-xl text-justify">
-          <h1 class="uppercase">this is box 3</h1>
-        </div>
-        <div class="flex-1 bg-red-200 box-border p-3 border-2 border-gray-100 rounded-xl text-justify">
-            <h1 class="uppercase">this is box 4</h1>
+          <div id="Italy">
+            <dl>
+              <dt>
+                <div id="Milan">
+                  <h3 class="text-teal-700 font-bold text-2xl text-shadow-md">Milan</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ipsam praesentium...</p>
+                  <a href="https://web.dev/learn" class="text-red-500 hover:text-blue-500 underline">Click here to read a detailed article about Milan.</a>
+                </div>
+              </dt>
+              <dt>
+                <div id="Venice">
+                  <h3 class="text-teal-700 font-bold text-2xl text-shadow-md">Venice</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, cumque...</p>
+                  <p class="text-indent ml-14">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                  <a href="https://web.dev/learn" class="text-red-500 hover:text-blue-500 underline">Click here to read a detailed article about Venice.</a>
+                </div>
+              </dt>
+              <dt>
+                <div id="Rome">
+                  <h3 class="text-teal-700 font-bold text-2xl text-shadow-md">Rome</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cum eos...</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                  <a href="https://web.dev/learn" class="text-red-500 hover:text-blue-500 underline">Click here to read a detailed article about Rome.</a>
+                </div>
+              </dt>
+            </dl>
           </div>
-          <div class="flex-1 bg-green-200 box-border p-3 border-2 border-gray-100 rounded-xl text-justify">
-            <h1 class="uppercase">this is box 5</h1>
-          </div>
-          <div class="flex-1 bg-indigo-200 box-border p-3 border-2 border-gray-100 rounded-xl text-justify">
-            <h1 class="uppercase">this is box 6</h1>
-          </div>
-
-      </div>
-    </div>
-
-    <div class="font-serif m-10 bg-red-200 box-border p-3 border-2 border-yellow-500 rounded-xl text-justify">
-      <h2 class="text-2xl uppercase font-extrabold text-center pb-3 tracking-wide">Introductory Paragraph</h2>
-      <p class="font-semibold text-lime-700 text-lg leading-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam illo labore voluptates ducimus voluptate et fugiat 
-        <span class="text-red-600">possimus libero dolorem odit voluptatum ex in suscipit dignissimos </span> obcaecati perspiciatis, optio id sunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dolorem, beatae iste eius accusantium eum quaerat 
-        nostrum suscipit aut tempore perferendis error ducimus eveniet illum architecto alias velit obcaecati aliquam?
-      </p>
-    </div>
-
-    <div class="container m-10 mx-auto p-5 bg-yellow-100"> 
-  
-          <div class="flex-1 box-border  justify-self-center border-8 border-black rounded-xl">
-            <img class="bg-origin-border w-50 h-50" src="bg2.jpg" alt="here is a backround picture">
-          </div>
-    </div>
-
-    <div class="container mt-10 mx-auto p-5 bg-yellow-100">
-    <div id="Table" class=" px-8 py-4">
-        <h2 class="text-2xl font-bold mb-3 text-center">Detailed Gradesheet</h2>
-        <table class="min-w-full border-black border-1 text-center">
-          <caption class=" text-lg mb-3 font-medium">Student Information 2025</caption>
-          
-          <thead>
-            <tr class="bg-purple-400">
-              <th class="border-1 border-black py-2 px-4">Sr. no</th>
-              <th class="border-1 border-black py-2 px-4">Name</th>
-              <th class="border-1 border-black py-2 px-4">Regs No</th>
-              <th class="border-1 border-black py-2 px-4">Email</th>
-              <th class="border-1 border-black py-2 px-4">DOB</th>
-              <th class="border-1 border-black py-2 px-4">Contact</th>
-              <th class="border-1 border-black py-2 px-4">Password</th>
-            </tr>
-          </thead>
-          
-          <tbody>
-            <tr class="even:bg-gray-100 hover:bg-gray-300">
-              <td class="border-1 border-black py-2 px-4">1</td>
-              <td class="border-1 border-black py-2 px-4">Laiba</td>
-              <td class="border-1 border-black py-2 px-4">1234</td>
-              <td class="border-1 border-black py-2 px-4">laiba@gmail.com</td>
-              <td class="border-1 border-black py-2 px-4">18-04-2006</td>
-              <td class="border-1 border-black py-2 px-4">+9234567821</td>
-              <td class="border-1 border-black py-2 px-4">8d87</td>
-            </tr>
-            <tr class="even:bg-gray-100 hover:bg-gray-300">
-                <td class="border-1 border-black py-2 px-4">2</td>
-                <td class="border-1 border-black py-2 px-4">Hamza</td>
-                <td class="border-1 border-black py-2 px-4">1234</td>
-                <td class="border-1 border-black py-2 px-4">hamza@gmail.com</td>
-                <td class="border-1 border-black py-2 px-4">18-04-2006</td>
-                <td class="border-1 border-black py-2 px-4">+9234567821</td>
-                <td class="border-1 border-black py-2 px-4">8d87</td>
-              </tr>
-              <tr class="even:bg-gray-100 hover:bg-gray-300">
-                <td class="border-1 border-black py-2 px-4">3</td>
-                <td class="border-1 border-black py-2 px-4">Arham</td>
-                <td class="border-1 border-black py-2 px-4">1234</td>
-                <td class="border-1 border-black py-2 px-4">arham@gmail.com</td>
-                <td class="border-1 border-black py-2 px-4">18-04-2006</td>
-                <td class="border-1 border-black py-2 px-4">+9234567821</td>
-                <td class="border-1 border-black py-2 px-4">8d87</td>
-              </tr>
-              <tr class="even:bg-gray-100 hover:bg-gray-300">
-                <td class="border-1 border-black py-2 px-4">4</td>
-                <td class="border-1 border-black py-2 px-4">Zaroon</td>
-                <td class="border-1 border-black py-2 px-4">1234</td>
-                <td class="border-1 border-black py-2 px-4">zaroon@gmail.com</td>
-                <td class="border-1 border-black py-2 px-4">18-04-2006</td>
-                <td class="border-1 border-black py-2 px-4">+9234567821</td>
-                <td class="border-1 border-black py-2 px-4">8d87</td>
-              </tr>
-          </tbody>
-      
-          <tfoot>
-            <tr>
-              <td colspan="7" class="border-1 border-black py-2 px-4 font-semibold">Total Students: 4</td>
-            </tr>
-          </tfoot>
-        </table>
-      </div>
-
-      <div class="flex justify-center m-25 bg-yellow-100">
-        <button class="shadow-xl border-4 border-yellow-400 bg-green-300 hover:bg-gray-300 p-4 rounded-xl">Click Me</button>
-      </div>
-
-      <div class="flex justify-center p-[10px] m-[0.5rem] bg-[#FEF08A]">
-      <div class="h-[100px] w-[100px] p-[20px] bg-[#9c8acf] font-[720] font-serif rounded-[0.75rem] text-[17px] ">Custom Box</div>
-    </div>
-
-    <div class="flex items-center justify-center min-h-screen">
-        <div class="p-5 bg-gray-300 font-[720] hover:bg-gray-500 font-serif rounded-xl text-center shadow-xl">
-          Center Text Box
         </div>
-      </div>
-      
+      </article>
+    </div>
 
-    </div> 
-  </body>
+   
+    <footer class="bg-teal-700 text-white py-3 text-lg border border-gray-300 rounded-lg flex justify-center gap-8 mt-6">
+      <p><span>© 2025 Kalsoom Khan. All Rights Reserved.</span></p>
+    </footer>
+  </div>
+
+</body>
+
 </html>
